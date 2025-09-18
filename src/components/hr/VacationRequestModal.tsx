@@ -34,7 +34,6 @@ const VacationRequestModal: React.FC<VacationRequestModalProps> = ({ isOpen, onC
   const { showSuccess, showInfo } = useNotification();
   const [requests, setRequests] = useState<VacationRequest[]>([]);
   const [loading, setLoading] = useState(true);
-  // const [selectedRequest, setSelectedRequest] = useState<VacationRequest | null>(null);
 
   useEffect(() => {
     if (isOpen) {

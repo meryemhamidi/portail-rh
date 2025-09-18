@@ -3,10 +3,7 @@ import Modal from '../common/Modal';
 import { Employee } from '../../types';
 import { 
   CalendarIcon, 
-  ClockIcon, 
-  UserGroupIcon,
-  XMarkIcon,
-  CheckIcon,
+  ClockIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 

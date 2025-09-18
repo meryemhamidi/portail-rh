@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-  UsersIcon,
   PlusIcon,
   PencilIcon,
   TrashIcon,
   EyeIcon,
-  CheckCircleIcon,
-  ExclamationCircleIcon,
   MagnifyingGlassIcon,
   UserIcon
 } from '@heroicons/react/24/outline';
 import { useNotification } from '../../hooks/useNotification';
 import NotificationModal from '../common/NotificationModal';
-import { UserProfile, CreateUserRequest, UserRole, ActivityLog } from '../../types/index';
+import { UserProfile, CreateUserRequest, UserRole } from '../../types/index';
 import { UserStorageService } from '../../services/userStorage';
-import Toast from '../common/Toast';
-import { useToast } from '../../hooks/useToast';
 
 interface UserManagementProps {
   currentUser: UserProfile;
@@ -25,7 +20,6 @@ interface UserManagementProps {
 const UserManagement: React.FC<UserManagementProps> = ({ currentUser }) => {
   const { notification, showSuccess, showInfo, hideNotification } = useNotification();
   const [users, setUsers] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterRole, setFilterRole] = useState('all');
   const [showAddUser, setShowAddUser] = useState(false);
@@ -40,7 +34,6 @@ const UserManagement: React.FC<UserManagementProps> = ({ currentUser }) => {
     // Charger les utilisateurs existants
     const storedUsers = UserStorageService.getUsers();
     setUsers(storedUsers);
-    setLoading(false);
   }, [currentUser]);
 
   const filteredUsers = users.filter(user => {

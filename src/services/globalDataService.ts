@@ -1,4 +1,4 @@
-import { Employee, Objective, Training, VacationRequest } from '../types';
+import { Objective, VacationRequest } from '../types';
 
 // Service global pour gérer les données partagées entre les rôles
 class GlobalDataService {
