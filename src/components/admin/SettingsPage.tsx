@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  CogIcon, 
-  ServerIcon,
-  ShieldCheckIcon,
+import {
+  CogIcon,
   BellIcon,
-  GlobeAltIcon,
-  DocumentTextIcon,
-  KeyIcon,
+  ShieldCheckIcon,
   CloudIcon,
   CheckIcon
 } from '@heroicons/react/24/outline';

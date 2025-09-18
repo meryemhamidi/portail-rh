@@ -4,7 +4,9 @@ import { Employee } from '../../types';
 import { 
   CalendarIcon, 
   ClockIcon, 
-  UserIcon,
+  UserGroupIcon,
+  XMarkIcon,
+  CheckIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 

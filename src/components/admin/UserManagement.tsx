@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-  UserIcon,
+  UsersIcon,
   PlusIcon,
-  MagnifyingGlassIcon,
-  EyeIcon,
   PencilIcon,
   TrashIcon,
-  XMarkIcon
+  EyeIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+  MagnifyingGlassIcon,
+  UserIcon
 } from '@heroicons/react/24/outline';
 import { useNotification } from '../../hooks/useNotification';
 import NotificationModal from '../common/NotificationModal';

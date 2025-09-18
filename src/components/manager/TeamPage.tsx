@@ -5,9 +5,7 @@ import {
   CalendarIcon,
   ChatBubbleLeftRightIcon,
   EyeIcon,
-  PencilIcon,
   ClockIcon,
-  CheckCircleIcon,
   ChartBarIcon,
   TrophyIcon,
   MagnifyingGlassIcon
