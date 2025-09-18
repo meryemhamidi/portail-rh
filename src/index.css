@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS pour le thème Teal */
+:root {
+  --teal-primary: #008080;
+  --teal-secondary: #20b2aa;
+  --teal-light: #40e0d0;
+  --teal-dark: #006666;
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+}
+
+/* Styles personnalisés pour l'application */
+.teal-gradient {
+  background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-secondary) 100%);
+}
+
+.teal-shadow {
+  box-shadow: 0 4px 14px 0 rgba(0, 128, 128, 0.15);
+}
+
+.sidebar-item {
+  @apply flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200;
+}
+
+.sidebar-item:hover {
+  @apply bg-teal-50 text-teal-700;
+}
+
+.sidebar-item.active {
+  @apply bg-teal-100 text-teal-800 border-r-2 border-teal-600;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border-gray-200 p-6;
+  border-width: 1px;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:shadow-md hover:border-teal-200;
+}
+
+.btn-primary {
+  @apply bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors duration-200;
+  border-width: 1px;
+}
+
+/* Animation pour les notifications */
+.notification-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.notification-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.notification-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notification-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Styles pour le chatbot */
+.chatbot-message {
+  @apply max-w-xs lg:max-w-md px-4 py-2 rounded-lg;
+}
+
+.chatbot-message.user {
+  @apply bg-teal-600 text-white ml-auto;
+}
+
+.chatbot-message.bot {
+  @apply bg-gray-200 text-gray-800 mr-auto;
+}
+
+/* Animation pour les éléments qui apparaissent */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slider personnalisé */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-track {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--teal-primary);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: var(--teal-dark);
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-track {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  background: var(--teal-primary);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    @apply transform -translate-x-full;
+  }
+  
+  .sidebar.open {
+    @apply translate-x-0;
+  }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--teal-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-dark);
+}
